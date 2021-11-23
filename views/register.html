@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .a{
+            border: red 0.5px solid;
+            margin: 0.2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!--//Container body-->
+        <div class="row justify-content-center">
+            <div class="col-11 border rounded m-2">
+                <!--//Col general form-->
+                <form method="POST" action="/register">
+                    <div class="row mt-3 justify-content-center">
+                        <div class="col-auto">
+                            <h3>Registro</h3>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center mt-3">
+                        <div class="col-11">
+                            <div class="input-group">
+                                <span class="input-group-text">Nombre</span>
+                                <label for="nombre" class="d-none">Nombre</label>
+                                <input type="text" class="form-control" placeholder="Nombre" name="nombre" required>
+                                <label for="apellido" class="d-none">Apellido</label>
+                                <input type="text" class="form-control" placeholder="Apellido" name="apellido" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center mt-3">
+                        <div class="col-11">
+                            <div class="input-group">
+                                <span class="input-group-text">Nombre de Usuario</span>
+                                <label for="nombredusuario" class="d-none">Nombre de usuario</label>
+                                <input type="text" class="form-control" placeholder="Usuario" name="nombredusuario" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center mt-3">
+                        <div class="col-11">
+                            <div class="input-group">
+                                <span class="input-group-text">Fecha de nacimiento</span>
+                                <label for="fechadenaci" class="d-none">Fecha de nacimiento</label>
+                                <input type="date" class="form-control" placeholder="Nombre de Usuario" name="fechadenaci" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center mt-3">
+                        <div class="col-11">
+                            <div class="input-group">
+                                <span class="input-group-text">Direccion</span>
+                                <label for="nombredlacalle" class="d-none">Nombre de la calle</label>
+                                <input type="text" class="form-control" placeholder="Nombre de la calle" name="nombredlacalle" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="numeroexterior" class="d-none">Numero Exterior</label>
+                                <input type="text" class="form-control" placeholder="Numero Exterior" name="numeroexterior" required>
+                                <label for="numerointerior" class="d-none">Numero Exterior (opcional)</label>
+                                <input type="text" class="form-control" placeholder="Numero Interior (opcional)" name="numerointerior">
+                                <label for="codigopostal" class="d-none">Codigo Postal</label>
+                                <input type="text" class="form-control" placeholder="Codigo Postal" name="codigopostal" required>
+                                <label for="pais" class="d-none">Pais</label>
+                                <select type="text" class="form-control" name="pais" required>
+                                    <option value="mexico">México</option>
+                                    <option value="canada">Canadá</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center mt-3">
+                        <div class="col-auto">
+                            <h5>Categorias de interés</h5>
+                        </div>
+                        <div class="col-11">
+                                <div class="row">
+                                    <div class="col-auto">
+                                        <input class="form-check-input" type="checkbox" name="electro">
+                                        <label class="form-check-label" for="electro">Electro</label>
+                                    </div>
+                                    <div class="col-auto">
+                                        <input class="form-check-input" type="checkbox" name="moda">
+                                        <label class="form-check-label" for="moda">Moda</label>
+                                    </div>
+                                    <div class="col-auto">
+                                        <input class="form-check-input" type="checkbox" name="hogar">
+                                        <label class="form-check-label" for="hogar">Hogar</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-auto">
+                                        <input class="form-check-input" type="checkbox" name="jugueteria">
+                                        <label class="form-check-label" for="jugueteria">Juguetería</label>
+                                    </div>
+                                    <div class="col-auto">
+                                        <input class="form-check-input" type="checkbox" name="vidasana">
+                                        <label class="form-check-label" for="vidasana">Vida sana</label>
+                                    </div>
+                                </div>
+                        </div>   
+                    </div>
+                    <div class="row justify-content-center mt-3">
+                        <div class="col-11">
+                            <label for="fotodeusuario" class="form-label">Foto de usuario</label>
+                            <input class="form-control" type="file" name="fotodeusuario" required>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center mt-3">
+                        <div class="col-11">
+                            <div class="input-group">
+                                <span class="input-group-text">Contraseña</span>
+                                <label for="contrasena" class="d-none">Contraseña</label>
+                                <input type="password" class="form-control" placeholder="Contraseña" name="contrasena" required>
+                                <label for="confirmarcontrasena" class="d-none">Confirmar Contraseña</label>
+                                <input type="password" class="form-control" placeholder="Confirmar Contraseña" name="confirmarcontrasena" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center mt-3 mb-3">
+                        <div class="col-11">
+                            <div class="row justify-content-between">
+                                <div class="col-3">
+                                    <button class="btn btn-success" type="submit">Registrar</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn btn-danger" type="reset">Borrar</button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </form> 
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

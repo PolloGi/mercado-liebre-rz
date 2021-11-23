@@ -1,0 +1,25 @@
+.main-article .description {
+    display: none;
+}
+article div i{
+    transition: 0.7s;
+}
+article div i:hover{
+    transform: rotate(-90deg);
+}
+article:hover .description {
+    display: block;
+    animation: descipcionfantasma 0.5s;
+}
+.btn{
+    transition: 0.4s;
+}
+.btn:hover{
+    background-color: #0022AA;
+    
+}
+@keyframes descipcionfantasma {
+    0% {opacity: 0%;}
+    25% {transform: translateY(10px); opacity: 50%;}
+    100% {opacity: 100%;}
+}
